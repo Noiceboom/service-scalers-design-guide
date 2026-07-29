@@ -89,6 +89,7 @@
   --shadow-hard-lg: 0 8px 0 0 var(--charcoal);
 
   /* TYPE */
+  --font-headline:"Flintstock","Open Sans Condensed","Arial Narrow",sans-serif;
   --font-display:"Open Sans Condensed","Arial Narrow",sans-serif;
   --font-body:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   --font-logotype:"Flintstock","Open Sans Condensed",sans-serif;
@@ -130,12 +131,12 @@ section:first-of-type{border-top:0}
 .eyebrow::before{content:"";width:20px;height:2px;background:var(--orange);display:inline-block}
 
 h1.display{
-  font-family:var(--font-display);font-weight:800;
+  font-family:var(--font-headline);font-weight:400;
   font-size:clamp(64px, 10vw, 148px);line-height:.88;letter-spacing:.005em;
   text-transform:uppercase;color:var(--charcoal);
 }
 h2.section-title{
-  font-family:var(--font-display);font-weight:800;
+  font-family:var(--font-headline);font-weight:400;
   font-size:clamp(38px, 5vw, 64px);line-height:1;letter-spacing:.005em;
   margin:14px 0 12px;text-transform:uppercase;
 }
@@ -286,9 +287,11 @@ h3.hdr{font-family:var(--font-display);font-weight:800;font-size:14px;letter-spa
 .suite-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .suite-cell{border-radius:var(--r-btn);padding:32px 20px;background:var(--body-cream);border:1px solid var(--rule);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:130px}
 .suite-cell.dark{background:var(--charcoal);border-color:var(--charcoal)}
+.suite-cell.on-orange{background:var(--orange);border-color:var(--orange)}
 .suite-cell img{max-width:100%;max-height:56px;height:auto;width:auto}
 .suite-label{font-family:var(--font-display);font-weight:800;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center}
 .suite-cell.dark .suite-label{color:rgba(249,241,222,.6)}
+.suite-cell.on-orange .suite-label{color:rgba(255,255,255,.85)}
 
 .icon-suite{margin-top:16px;display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
 .icon-suite-cell{aspect-ratio:1/1;background:var(--body-cream);border:1px solid var(--rule);border-radius:var(--r-btn);padding:16px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
@@ -347,7 +350,7 @@ h3.hdr{font-family:var(--font-display);font-weight:800;font-size:14px;letter-spa
 .type-card{background:var(--light-cream);border:1px solid var(--charcoal);border-radius:var(--r-card);padding:32px;box-shadow:var(--shadow-hard-sm)}
 .type-card .label{font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
 .type-card .specimen{line-height:.9;letter-spacing:.005em;color:var(--charcoal)}
-.type-card .specimen.condensed{font-family:var(--font-display);font-weight:800;font-size:104px;text-transform:uppercase}
+.type-card .specimen.condensed{font-family:var(--font-headline);font-weight:400;font-size:104px;text-transform:uppercase}
 .type-card .specimen.body{font-family:var(--font-body);font-weight:600;font-size:56px;letter-spacing:-.005em;line-height:1}
 .type-card .specimen.script{font-family:var(--font-script);font-weight:700;font-size:80px;color:var(--orange);line-height:1;letter-spacing:-.01em}
 .type-card .specimen.mono{font-family:var(--font-mono);font-weight:500;font-size:44px;letter-spacing:.02em}
@@ -823,7 +826,7 @@ footer .legal{margin-top:44px;border-top:1px solid rgba(249,241,222,.1);padding-
           <img src="assets/logos/service-scalers-logo-primary-cream.svg" alt="Service Scalers Cream" style="max-width:100%;max-height:150px;height:auto;width:auto"/>
         </div>
         <div class="logo-stage orange" style="min-height:200px;padding:32px">
-          <img src="assets/logos/service-scalers-logo-primary-reversed.svg" alt="Service Scalers Reversed" style="max-width:100%;max-height:150px;height:auto;width:auto"/>
+          <img src="assets/logos/service-scalers-logo-primary-cream.svg" alt="Service Scalers on Orange" style="max-width:100%;max-height:150px;height:auto;width:auto"/>
         </div>
       </div>
     </div>
@@ -860,8 +863,8 @@ footer .legal{margin-top:44px;border-top:1px solid rgba(249,241,222,.1);padding-
       <div class="suite-cell"><img src="assets/logos/service-scalers-logo-horizontal-color.svg" alt="Color"/><div class="suite-label">Color · Default</div></div>
       <div class="suite-cell"><img src="assets/logos/service-scalers-logo-horizontal-charcoal.svg" alt="Charcoal"/><div class="suite-label">Charcoal · Single ink</div></div>
       <div class="suite-cell"><img src="assets/logos/service-scalers-logo-horizontal-orange.svg" alt="Orange"/><div class="suite-label">Orange · Single ink</div></div>
-      <div class="suite-cell dark"><img src="assets/logos/service-scalers-logo-horizontal-cream.svg" alt="Cream"/><div class="suite-label">Cream · On charcoal</div></div>
-      <div class="suite-cell dark"><img src="assets/logos/service-scalers-logo-horizontal-reversed.svg" alt="Reversed"/><div class="suite-label">Reversed · On orange</div></div>
+      <div class="suite-cell dark"><img src="assets/logos/service-scalers-logo-horizontal-reversed.svg" alt="Reversed"/><div class="suite-label">Reversed · On charcoal</div></div>
+      <div class="suite-cell on-orange"><img src="assets/logos/service-scalers-logo-horizontal-cream.svg" alt="Cream on Orange"/><div class="suite-label">Cream · On orange</div></div>
       <div class="suite-cell"><img src="assets/logos/service-scalers-logo-horizontal-gold.svg" alt="Gold"/><div class="suite-label">Gold · Premium collateral</div></div>
       <div class="suite-cell"><img src="assets/logos/service-scalers-logo-horizontal-gray-green.svg" alt="Gray Green"/><div class="suite-label">Gray Green · Muted print</div></div>
     </div>
@@ -988,14 +991,14 @@ footer .legal{margin-top:44px;border-top:1px solid rgba(249,241,222,.1);padding-
 <section id="type" class="wrap">
   <span class="eyebrow">05 · Typography</span>
   <h2 class="section-title">Two workhorses. <em>One script.</em></h2>
-  <p class="lede"><b>Open Sans Condensed 800</b> carries every headline and every number. <b>Open Sans</b> carries everything else. <b>Voltage</b> is the script accent — one emphasized phrase per view. <b>Flintstock</b> is the wordmark face, used <i>only</i> in the logo lockup (never re-typed in body copy). <b>JetBrains Mono</b> is reserved for tokens, timestamps and technical labels.</p>
+  <p class="lede"><b>Flintstock</b> carries the biggest display type — hero headlines and section titles — matching the logo wordmark. <b>Open Sans Condensed 800</b> carries every KPI, number, card title and small label (its tabular numerals are why). <b>Open Sans</b> carries everything else. <b>Voltage</b> is the script accent — one emphasized phrase per view. <b>JetBrains Mono</b> is reserved for tokens, timestamps and technical labels.</p>
 
   <div class="type-grid">
     <div class="type-card">
-      <div class="label"><span>Open Sans Condensed · 800</span><span>Uppercase · +5 track</span></div>
+      <div class="label"><span>Flintstock · Regular</span><span>Uppercase · +5 track</span></div>
       <div class="specimen condensed">More<br/>Calls</div>
-      <div class="meta-2"><span>Headlines · KPIs · Section titles</span><span>28–148 px</span></div>
-      <div class="alpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ &nbsp; 0123456789 &nbsp; $&amp;.,%!?</div>
+      <div class="meta-2"><span>Display headlines · Section titles</span><span>38–148 px</span></div>
+      <div class="alpha" style="font-family:var(--font-headline);font-size:18px;text-transform:uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ &nbsp; 0123456789 &nbsp; $&amp;.,%!?</div>
     </div>
     <div class="type-card">
       <div class="label"><span>Open Sans · 400 / 600 / 700</span><span>0% track</span></div>
@@ -1024,21 +1027,22 @@ footer .legal{margin-top:44px;border-top:1px solid rgba(249,241,222,.1);padding-
 
   <div class="type-card" style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center">
     <div>
-      <div class="label" style="margin-bottom:14px"><span>Flintstock · Regular</span><span>Logotype only</span></div>
-      <div style="font-family:var(--font-logotype);font-size:64px;line-height:1;color:var(--charcoal);letter-spacing:.005em">Service<br/>Scalers</div>
-      <div class="meta-2" style="margin-top:20px"><span>Wordmark exclusively</span><span>Never in body</span></div>
-      <div class="alpha" style="margin-top:14px;font-family:var(--font-logotype);font-size:20px;color:var(--muted)">ABCDEFGHIJKLMNOPQRSTUVWXYZ &nbsp; 0123456789</div>
+      <div class="label" style="margin-bottom:14px"><span>Open Sans Condensed · 800</span><span>Numerals · 0.3 track</span></div>
+      <div style="font-family:var(--font-display);font-weight:800;font-size:88px;line-height:1;color:var(--charcoal);letter-spacing:.3px">+34%<br/>$179</div>
+      <div class="meta-2" style="margin-top:20px"><span>KPIs · dollars · phone numbers</span><span>18–96 px</span></div>
+      <div class="alpha" style="margin-top:14px;font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--muted);letter-spacing:.3px">0123456789 &nbsp; $% + − ↑ ↓ &nbsp; ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
     </div>
     <div style="background:var(--body-cream);border:1px solid var(--rule);border-radius:var(--r-btn);padding:24px">
-      <h3 class="hdr">A rule with real teeth</h3>
-      <p style="color:var(--green);font-size:14.5px;line-height:1.6">Flintstock ships in this repo (<code style="font-family:var(--font-mono);font-size:12px;background:var(--rule);padding:1px 5px;border-radius:3px">assets/fonts/</code>) for the sole purpose of viewing the wordmark correctly. It is <b>not</b> a text font — the character set is limited and the metrics are tuned for the two-word lockup. If you need "Service Scalers" as type in a layout, use the SVG asset from <code style="font-family:var(--font-mono);font-size:12px;background:var(--rule);padding:1px 5px;border-radius:3px">assets/logos/</code> instead. All headlines and KPIs in marketing work are Open Sans Condensed 800.</p>
+      <h3 class="hdr">The two-font display hierarchy</h3>
+      <p style="color:var(--green);font-size:14.5px;line-height:1.6"><b>Flintstock</b> is the display headline font — it matches the logo wordmark aesthetically and shows up in hero headlines, section titles and cover slides. It's uppercase-only, ships in <code style="font-family:var(--font-mono);font-size:12px;background:var(--rule);padding:1px 5px;border-radius:3px">assets/fonts/</code>, and never gets re-typed as body copy.</p>
+      <p style="color:var(--green);font-size:14.5px;line-height:1.6;margin-top:12px"><b>Open Sans Condensed 800</b> is the numeric &amp; label font — its tabular numerals keep KPI grids aligned and its glyph set is complete for any card title, chip, or small label. When in doubt: display size → Flintstock; card size or smaller → Condensed.</p>
     </div>
   </div>
 
   <h3 class="hdr" style="margin-top:44px">Marketing Type Scale</h3>
   <div class="type-scale">
-    <div class="row"><span class="lab">Display · XL</span><span class="px">96 / 0.9</span><span class="sample" style="font-family:var(--font-display);font-weight:800;font-size:72px;text-transform:uppercase">More calls, fewer headaches</span></div>
-    <div class="row"><span class="lab">Display · Lg</span><span class="px">72 / 0.92</span><span class="sample" style="font-family:var(--font-display);font-weight:800;font-size:56px;text-transform:uppercase">SEO that pays for itself</span></div>
+    <div class="row"><span class="lab">Display · XL</span><span class="px">Flintstock · 96 / 0.9</span><span class="sample" style="font-family:var(--font-headline);font-weight:400;font-size:72px;text-transform:uppercase">More calls, fewer headaches</span></div>
+    <div class="row"><span class="lab">Display · Lg</span><span class="px">Flintstock · 72 / 0.92</span><span class="sample" style="font-family:var(--font-headline);font-weight:400;font-size:56px;text-transform:uppercase">SEO that pays for itself</span></div>
     <div class="row"><span class="lab">H1</span><span class="px">44 / 1.0</span><span class="sample" style="font-family:var(--font-display);font-weight:800;font-size:40px;text-transform:uppercase">What we did this month</span></div>
     <div class="row"><span class="lab">H2</span><span class="px">32 / 1.05</span><span class="sample" style="font-family:var(--font-display);font-weight:800;font-size:28px;text-transform:uppercase">Google Ads, done right</span></div>
     <div class="row"><span class="lab">Voltage H1</span><span class="px">.9em · orange</span><span class="sample" style="font-family:var(--font-display);font-weight:800;font-size:32px;text-transform:uppercase">Real leads, <em style="font-family:var(--font-script);font-weight:700;color:var(--orange);text-transform:none;font-style:normal;font-size:.92em">not just clicks.</em></span></div>
@@ -1684,7 +1688,8 @@ footer .legal{margin-top:44px;border-top:1px solid rgba(249,241,222,.1);padding-
     <div class="row"><span>--shadow-hard-lg</span><span>0 8px 0 0 #202526</span><span>ss/colors_and_type.css</span><span class="role">Hero art, feature blocks.</span></div>
     <div class="row"><span>--font-display</span><span>Open Sans Condensed 800</span><span>ss/colors_and_type.css</span><span class="role">Headlines, KPIs, section titles.</span></div>
     <div class="row"><span>--font-body</span><span>Open Sans 400/600/700</span><span>ss/colors_and_type.css</span><span class="role">Body, nav, forms, UI.</span></div>
-    <div class="row"><span>--font-logotype</span><span>Flintstock Regular</span><span>assets/fonts/</span><span class="role">Wordmark only — never body copy.</span></div>
+    <div class="row"><span>--font-headline</span><span>Flintstock Regular</span><span>assets/fonts/</span><span class="role">Hero headlines &amp; section titles.</span></div>
+    <div class="row"><span>--font-logotype</span><span>Flintstock Regular</span><span>assets/fonts/</span><span class="role">Wordmark — use SVG asset, not typed.</span></div>
     <div class="row"><span>--font-script</span><span>Voltage</span><span>assets/fonts/</span><span class="role">One accent phrase per headline.</span></div>
     <div class="row"><span>--font-mono</span><span>JetBrains Mono 500</span><span>ss/colors_and_type.css</span><span class="role">Tokens, timestamps, URLs.</span></div>
     <div class="row"><span>--grid-max</span><span>1296px</span><span>ss/colors_and_type.css</span><span class="role">Container max width.</span></div>
